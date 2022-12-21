@@ -4,7 +4,7 @@ from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_manager, LoginManager
 from flask_login import login_required, current_user
-from flask_mail import Mail
+# from flask_mail import Mail
 import json
 from flask import Flask
 from flask import Flask, render_template, request, redirect, flash, session, url_for
@@ -24,14 +24,14 @@ login_manager.login_view = 'login'
 
 # SMTP MAIL SERVER SETTINGS
 
-app.config.update(
-    MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT='465',
-    MAIL_USE_SSL=True,
-    MAIL_USERNAME="add your gmail-id",
-    MAIL_PASSWORD="add your gmail-password"
-)
-mail = Mail(app)
+# app.config.update(
+#     MAIL_SERVER='smtp.gmail.com',
+#     MAIL_PORT='465',
+#     MAIL_USE_SSL=True,
+#     MAIL_USERNAME="add your gmail-id",
+#     MAIL_PASSWORD="add your gmail-password"
+# )
+# mail = Mail(app)
 
 
 @login_manager.user_loader
