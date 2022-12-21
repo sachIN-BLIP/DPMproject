@@ -39,11 +39,8 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-# app.config['SQLALCHEMY_DATABASE_URL']='mysql://username:password@localhost/databas_table_name'
-app.config['MYSQL_HOST'] = 'ssh root@143.244.135.235'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '123@Devops'
-app.config['MYSQL_DB'] = 'flask'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ssh root@143.244.135.235/hms'
 db = SQLAlchemy(app)
 
 
